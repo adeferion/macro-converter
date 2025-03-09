@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>converter</title>
+    </head>
+
+    <body>
+        <label>
+            From
+            <select id="select-from">
+                <option value="txt">Plain Text</option>
+                <option selected="selected" value="zbf">zBot Frame</option>
+                <option value="xbot-frame">xBot Frame</option>
+                <option value="replaybot">ReplayBot</option>
+                <option value="tasbot-f">TASBOT</option>
+                <option value="ybot-frame">yBot Frame</option>
+                <option value="echof">Echo</option>
+                <option value="url-f">Universal Replay</option>
+                <option value="qbot">qBot Frame</option>
+                <option value="kdbot">KD-Bot Frame</option>
+				<option value="mhrjson">MHR Json</option>
+            </select>
+        </label>
+        <input type="file" id="ipt-file">
+        
+        <br>
+
+        <label>
+            To
+            <select id="select-to">
+                <option selected="selected" value="txt">Plain Text</option>
+                <option value="zbf">zBot Frame</option>
+                <option value="xbot-frame">xBot Frame</option>
+                <option value="replaybotf">ReplayBot</option>
+                <option value="tasbot-f">TASBOT</option>
+                <option value="ybot-frame">yBot Frame</option>
+                <option value="echof">Echo</option>
+                <option value="url-f">Universal Replay</option>
+                <option value="qbot">qBot Frame</option>
+                <option value="kdbot">KD-Bot Frame</option>
+				<option value="mhrjson">MHR Json</option>
+            </select>
+        </label>
+
+        <br>
+
+        <label>
+            <input type="checkbox" id="chk-clean" checked>
+            Clean replay (removes reduntant actions)
+        </label>
+
+        <br>
+
+        <button id="btn-convert">Convert</button>
+        <br>
+        <textarea id="textarea" cols="40" rows="40" disabled></textarea>
+        <br>
+        <button id="btn-offset-frames">Offset Frames</button>
+        <input id="ipt-offset-frames" type="number" value="0">
+        <br>
+        <button id="btn-remove-p1">Remove all Player 1 inputs</button>
+        <button id="btn-remove-p2">Remove all Player 2 inputs</button>
+        <br>
+        <button id="btn-flip-hold">Flip hold ⟷ release</button>
+        <button id="btn-flip-player">Flip player 1 ⟷ player 2</button>
+        <br>
+        <button id="btn-sort-inputs">Sort inputs by frame</button>
+
+        <script src="https://unpkg.com/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+        <script src="./main.js"></script>
+    </body>
+
+</html>
